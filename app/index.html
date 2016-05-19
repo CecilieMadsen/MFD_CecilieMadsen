@@ -109,56 +109,17 @@
 
   <!-- products --> 
 
-     <div class="flex-container-products"> 
+     <div class="flex-container-products" ng-controller="StoreController as storectlr"> 
             <div class="flex-items-products"> </div>
-              <div class="flex-products-1">
-                <img src="/images/product1.png" alt="Product1">
-                  <div ng-controller="StoreController as storectlr"> 
-                    <ul> 
-                      <li ng-repeat="product in storectlr.products"> 
+              <div ng-repeat="product in storectlr.products">
+                <div class="flex-products">
+                        <img ng-src="{{product.image}}" alt="{{product.name}}">
                         <h4>{{product.name}}</h4> 
                         <h5>${{product.price}}</h5> 
                         <p>{{product.description}}</p> 
-                      </li> 
-                    </ul> 
                   </div>
               </div>
-              <div class="flex-products-2">
-                <img src="/images/product2.png" alt="Product2">
-                  <div ng-controller="StoreController as storectlr"> 
-                    <ul> 
-                      <li ng-repeat="product in storectlr.products"> 
-                        <h4>{{product.name}}</h4> 
-                        <h5>${{product.price}}</h5> 
-                        <p>{{product.description}}</p> 
-                      </li> 
-                    </ul> 
-                  </div>
-              </div>
-              <div class="flex-products-3">
-                <img src="/images/product3.png" alt="Product3">
-                  <div ng-controller="StoreController as storectlr"> 
-                    <ul> 
-                      <li ng-repeat="product in storectlr.products"> 
-                        <h4>{{product.name}}</h4> 
-                        <h5>${{product.price}}</h5> 
-                        <p>{{product.description}}</p> 
-                      </li> 
-                    </ul> 
-                  </div>
-              </div>
-              <div class="flex-products-4">
-                <img src="/images/product4.png" alt="Product4">
-                  <div ng-controller="StoreController as storectlr"> 
-                    <ul> 
-                      <li ng-repeat="product in storectlr.products"> 
-                        <h4>{{product.name}}</h4> 
-                        <h5>${{product.price}}</h5> 
-                        <p>{{product.description}}</p> 
-                      </li> 
-                    </ul> 
-                  </div>
-              </div>
+              
     </div> <!-- flex container products -->
 
 

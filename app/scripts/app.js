@@ -61,6 +61,18 @@ app.config(['$routeProvider',
     	this.products = gem;
     });
 
+    /* contact form */
+
+    app.controller('FormController', function(){
+      this.contact = {};
+
+      this.submitForm = function() {
+        alert('SUBMITTET yay!')
+        this.contact = {};
+      };
+
+    });
+
     })();
 
     
